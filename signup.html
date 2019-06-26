@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+      <link rel="icon" href="ico.png"  sizes="32x32">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet prefetch' href='http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Sign up</title>
+        <link rel="stylesheet" href="css/home/BG.css">
+      <link rel="stylesheet" href="css/signup.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+        canvas {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+
+      </style>
+</head>
+
+<body >
+
+<canvas id="c"></canvas>
+  <div id="login-box">
+  <div class="left">
+    <h1 style="font-weight:400;">Sign up</h1>
+          <form method="post" action="takshashila/insertprofile.php">
+    <div class="sign_up_content">
+
+    <input type="text" id="name" name="name" placeholder="Name" required oninvalid="this.setCustomValidity('Enter your name')" oninput="setCustomValidity('')" />
+    <input type="date" id="dob" name="dob" placeholder="DOB" required oninvalid="this.setCustomValidity('Enter your date of birth')" oninput="setCustomValidity('')"/>
+    <input type="text" id="department" name="department" placeholder="Department" required oninvalid="this.setCustomValidity('Enter your department')"oninput="setCustomValidity('')"  />
+    <input type="text" id="collegename" name="collegename" placeholder="College" required oninvalid="this.setCustomValidity('Enter ypur college name')" oninput="setCustomValidity('')" />
+    <input type="number" id="mobile" pattern=".{10,10}" name="mobile" placeholder="Mobile Number" oninvalid="this.setCustomValidity('Enter your mobile number')" oninput="setCustomValidity('')" required/>
+    <input type="text" id="mail" name="email" placeholder="Mail-Id" required oninvalid="this.setCustomValidity('Enter your E-mail')" oninput="setCustomValidity('')"/>
+    <input type="password" id="password" name="password" placeholder="Password" oninvalid="this.setCustomValidity('Enter a password')" oninput="setCustomValidity('')" required/>
+    <input type="password" id="password2" name="password2" placeholder="Retype password" oninvalid="this.setCustomValidity('Re-enter the password')" oninput="setCustomValidity('')" required/>
+
+  </div>
+    <input type="submit" class="signup" name="signup_submit" value="Sign me up" />
+          </form>
+
+
+
+<!-- <a href="#" class="login-with-fb facebook">
+  <span class="icon fa fa-facebook"></span>
+  Signin with facebook
+</a>
+<a href="#" class="login-with-google google">
+  <span class="icon fa fa-google"></span>
+  Signin with google
+</a> -->
+</div>
+  </div>
+
+<script type="text/javascript">
+
+// function registerProfile(){
+// var name = document.getElementById('name').value;
+// var email = document.getElementById('mail').value;
+// var dob = document.getElementById('dob').value;
+// var department = document.getElementById('department').value;
+// var mobile = document.getElementById('mobile').value;
+// var password = document.getElementById('password').value;
+// var collegename = document.getElementById('collegename').value;
+//   alert(name+email+dob+department+mobile+password+collegename);
+//   $.ajax({
+//   type: "POST",
+//   url: "takshashila/insertprofile.php",
+//   data: {
+//       name: name,email:mail,dob: dob,department:department,mobile:mobile,password:password,collegename:collegename
+//   },
+//   success: function (data) {
+//       if(data==="failed"){
+//   alert("Try again");
+//   }else{
+//   alert("Your id is"+data+".Check your email for your Qr Code.!");
+//   location.href = "index.php";
+//   }
+//   }
+// });
+// }
+</script>
+</body>
+
+</html>
